@@ -7,5 +7,9 @@ x = [[181, 80, 44], [177, 70, 43], [160, 60, 38], [190, 89,45], [200, 105, 50], 
 y = ['male', 'female', 'female', 'male','male','female']
 clf = tree.DecisionTreeClassifier()
 clf = clf.fit(x,y)
-prediction = clf.predict([[200,90,48]])
+lst = ['none'] *3
+lst[0]= int(input('Enter your height:'))
+lst[1]= int(input('Enter your weight:'))
+lst[2]= int(input('Enter your shoesize:'))
+prediction = clf.predict([lst])
 print (prediction)
